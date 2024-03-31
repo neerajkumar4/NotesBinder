@@ -61,12 +61,6 @@ const userSchema = new mongoose.Schema(
         },
       },
     ],
-    createdClasses: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Class",
-      },
-    ],
     joinedClasses: [
       {
         classId: {

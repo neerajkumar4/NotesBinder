@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const classSchema = new mongoose.Schema(
   {
@@ -12,14 +12,14 @@ const classSchema = new mongoose.Schema(
     },
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User', // Reference to the User model
+      ref: "User", // Reference to the User model
       required: true,
     },
     members: [
       {
         userId: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: 'User', // Reference to the User model
+          ref: "User", // Reference to the User model
         },
         joinedAt: {
           type: Date,
@@ -31,7 +31,7 @@ const classSchema = new mongoose.Schema(
       {
         userId: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: 'User', // Reference to the User model
+          ref: "User", // Reference to the User model
         },
         requestedAt: {
           type: Date,
@@ -39,16 +39,10 @@ const classSchema = new mongoose.Schema(
         },
       },
     ],
-    classPosts: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Post', // Reference to the Post model
-      },
-    ],
   },
   { timestamps: true }
 );
 
-const Class = mongoose.model('Class', classSchema);
+const Class = mongoose.model("Class", classSchema);
 
 export default Class;
