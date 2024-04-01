@@ -5,6 +5,8 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import authRouter from "./routes/auth.route.js";
 import classRouter from "./routes/class.route.js";
+import userRouter from "./routes/user.route.js";
+import postRouter from "./routes/post.route.js";
 
 dotenv.config();
 mongoose
@@ -21,6 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth", authRouter);
 app.use("/api/class", classRouter);
+app.use("/api/user", userRouter);
 
 app.listen(4000, () => {
   console.log("Server is running at port 4000!");

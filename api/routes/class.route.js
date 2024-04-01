@@ -12,6 +12,6 @@ const router = express.Router();
 router.post("/create", verifyToken, createClass);
 router.delete("/delete/:id", verifyToken, deleteClass);
 router.post("/update/:id", verifyToken, updateClass);
-router.get("/get/:id", getClass);
+router.get("/:id", getClass);
 
 export default router;
