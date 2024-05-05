@@ -1,40 +1,116 @@
-.App {
-  text-align: center;
-}
-body{
-  background-color: #93B1A6;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+.logo1{
+  color: #D65A31;
+}
+.logo2{
+  color: #EEEEEE;
+}
+.logoTxt{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 2em;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 2% 0% 2%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.header{
+  background-color:#222831;
+}
+.searchBar input{
+  font-size: 20px;
+  width: 100%;
+  background-color: black;
+  color: #EEEEEE;
+}
+.searchBar input:focus{
+ outline: none;
+}
+.searchBar{
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+.searchIcon{
+  background-color: #222831;
+  font-size: 20px;
+  color: #EEEEEE;
+}
+.hideSearchIcon{
+  background-color: black;
+  border-width: 0px;
+  font-size: 20px;
+  color: #EEEEEE;
+  padding: 10px;
+  margin-right: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.navTabs{
+  display: flex;
+  flex-direction: row;
+}
+.header input:focus{
+  outline: none;
+}
+.navbarList{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+.navbarList li{
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  list-style: none;
+  color: #D65A31;
+}
+.navbarList li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  color: #EEEEEE;
+}
+.Link{
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width:800px){
+  .homeTab{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .aboutTab{
+    display: none;
+  }
+  .searchBar input{
+    padding: 0px;
+    width: 100%;
+    font-size: 16px;
+  }
+  .logoTxt{
+    font-size: 1.8em;
+  }
+  .navbarList li{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width:500px){
+  .logoTxt{
+    font-size: 1.5em;
+  }
+  .searchBar input{
+    padding: 0px;
+    width: 100%;
+    font-size: 14px;
+  }
+  .navbarList li{
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width:300px){
+  .logoTxt{
+    font-size: 1em;
   }
 }
