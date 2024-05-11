@@ -114,3 +114,19 @@
     font-size: 1em;
   }
 }
+
+
+/* SignIn SignUp */
+.signLink{
+  color: #D65A31;
+}
+.signLink:hover{
+  font-weight: bold;
+}
+.signButton{
+  background-color: #222831;
+  color: #EEEEEE;
+}
+.signButton:hover{
+  font-weight: bold;
+}
