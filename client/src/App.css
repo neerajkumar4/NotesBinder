@@ -1,5 +1,7 @@
 
-
+body{
+  height: 100vh;
+}
 /* Navbar */
 .logo1{
   color: #D65A31;
