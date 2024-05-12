@@ -3,6 +3,7 @@ import { IconButton } from "rsuite";
 import { Search } from "@rsuite/icons";
 import ArowBackIcon from "@rsuite/icons/ArowBack";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import {
   Modal,
   ModalOverlay,
@@ -13,7 +14,7 @@ import {
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [searchTerm, setSearchTerm] = useState("");
- 
+  const { currentUser } = useSelector((state) => state.user);
   return (
     <header className="header">
       <div className="navbar">
@@ -36,9 +37,21 @@ const Navbar = () => {
             <Link className="Link aboutTab" to="/explore">
               <li>Explore</li>
             </Link>
-              <Link className="Link" to="/sign-in">
+            {currentUser ? (
+              <Link to="/profile">
+                <li>
+                  <img
+                    className="rounded-full h-10 w-10  object-cover"
+                    src={currentUser?.avatar}
+                    alt="profile"
+                  />
+                </li>
+              </Link>
+            ) : (
+              <Link className="Link" to="/profile">
                 <li>SignIn</li>
               </Link>
+            )}
           </ul>
         </div>
       </div>
