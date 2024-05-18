@@ -67,7 +67,7 @@ const Profile = () => {
 
   return (
     <div className="p-3 max-w-md mx-auto">
-      <h1 className="text-3xl font-semibold text-center my-7 profile-txt">Profile</h1>
+      <h1 className="text-3xl font-semibold text-center my-7 profile-txt">PROFILE</h1>
       <div className="flex flex-col gap-4">
         <img
           className="rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2"
@@ -125,7 +125,7 @@ const Profile = () => {
         >
           Delete Account
         </span>
-        <span onClick={handleSignOut} className="text-red-700 cursor-pointer">
+        <span onClick={handleSignOut} className="text-red-700 cursor-pointer font-semibold">
           Sign Out
         </span>
       </div>
