@@ -132,3 +132,17 @@ body{
 .signButton:hover{
   font-weight: bold;
 }
+
+/* Profile */
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+ .username-txt{
+  color: #D65A31;
+ }
