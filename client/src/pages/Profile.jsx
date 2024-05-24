@@ -11,6 +11,7 @@ import {
 import PageNextIcon from "@rsuite/icons/PageNext";
 import { useToast } from "@chakra-ui/react";
 import { IconButton } from "rsuite";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const toast = useToast();
@@ -67,55 +68,64 @@ const Profile = () => {
 
   return (
     <div className="p-3 max-w-md mx-auto">
-      <h1 className="text-3xl font-semibold text-center my-7 profile-txt">PROFILE</h1>
+      <h1 className="text-3xl font-semibold text-center my-7 profile-txt">
+        PROFILE
+      </h1>
       <div className="flex flex-col gap-4">
         <img
           className="rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2"
           src={currentUser?.avatar}
           alt="profile"
         />
-        <h1 className="text-2xl font-semibold text-center username-txt">@{currentUser?.username}</h1>
+        <h1 className="text-2xl font-semibold text-center username-txt">
+          @{currentUser?.username}
+        </h1>
         <ul className="list-none p-0 m-0 flex flex-col gap-4">
-          <li className="menu-item flex justify-between">
-            My Classes
-            <IconButton
-              className="profileNextBtn"
-              icon={<PageNextIcon />}
-              // onClick={}
-            />
-          </li>
-          <li className="menu-item flex justify-between">
-            My Posts
-            <IconButton
-              className="profileNextBtn"
-              icon={<PageNextIcon />}
-              // onClick={}
-            />
-          </li>
-          <li className="menu-item flex justify-between">
-            My collections
-            <IconButton
-              className="profileNextBtn"
-              icon={<PageNextIcon />}
-              // onClick={}
-            />
-          </li>
-          <li className="menu-item flex justify-between">
-            Create Class
-            <IconButton
-              className="profileNextBtn"
-              icon={<PageNextIcon />}
-              // onClick={}
-            />
-          </li>
-          <li className="menu-item flex justify-between">
-            Edit Profile
-            <IconButton
-              className="profileNextBtn"
-              icon={<PageNextIcon />}
-              // onClick={}
-            />
-          </li>
+          <Link to="/my-classes">
+            <li className="menu-item flex justify-between">
+              My Classes
+              <IconButton
+                className="profileNextBtn"
+                icon={<PageNextIcon />}
+              />
+            </li>
+          </Link>
+          <Link to="/my-posts">
+            <li className="menu-item flex justify-between">
+              My Posts
+              <IconButton
+                className="profileNextBtn"
+                icon={<PageNextIcon />}
+              />
+            </li>
+          </Link>
+          <Link to="/my-collections">
+            <li className="menu-item flex justify-between">
+              My collections
+              <IconButton
+                className="profileNextBtn"
+                icon={<PageNextIcon />}
+              />
+            </li>
+          </Link>
+          <Link to="/create-class">
+            <li className="menu-item flex justify-between">
+              Create Class
+              <IconButton
+                className="profileNextBtn"
+                icon={<PageNextIcon />}
+              />
+            </li>
+          </Link>
+          <Link to="/edit-profile">
+            <li className="menu-item flex justify-between">
+              Edit Profile
+              <IconButton
+                className="profileNextBtn"
+                icon={<PageNextIcon />}
+              />
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="flex justify-between mt-5">
@@ -125,7 +135,10 @@ const Profile = () => {
         >
           Delete Account
         </span>
-        <span onClick={handleSignOut} className="text-red-700 cursor-pointer font-semibold">
+        <span
+          onClick={handleSignOut}
+          className="text-red-700 cursor-pointer font-semibold"
+        >
           Sign Out
         </span>
       </div>

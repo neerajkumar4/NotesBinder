@@ -1,135 +1,133 @@
-
-body{
+body {
   height: 100vh;
 }
 /* Navbar */
-.logo1{
-  color: #D65A31;
+.logo1 {
+  color: #d65a31;
 }
-.logo2{
-  color: #EEEEEE;
+.logo2 {
+  color: #eeeeee;
 }
-.logoTxt{
+.logoTxt {
   display: flex;
   flex-wrap: wrap;
   font-size: 2em;
 }
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   padding: 0% 2% 0% 2%;
   align-items: center;
 }
-.header{
-  background-color:#222831;
+.header {
+  background-color: #222831;
 }
-.searchBar input{
+.searchBar input {
   font-size: 20px;
   width: 100%;
   background-color: black;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
-.searchBar input:focus{
- outline: none;
+.searchBar input:focus {
+  outline: none;
 }
-.searchBar{
+.searchBar {
   background-color: black;
   display: flex;
   align-items: center;
 }
-.searchIcon{
+.searchIcon {
   background-color: #222831;
   font-size: 20px;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
-.hideSearchIcon{
+.hideSearchIcon {
   background-color: black;
   border-width: 0px;
   font-size: 20px;
-  color: #EEEEEE;
+  color: #eeeeee;
   padding: 10px;
   margin-right: 4px;
 }
 
-.navTabs{
+.navTabs {
   display: flex;
   flex-direction: row;
 }
-.header input:focus{
+.header input:focus {
   outline: none;
 }
-.navbarList{
+.navbarList {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
-.navbarList li{
+.navbarList li {
   margin: 10px;
   font-size: 18px;
   font-weight: 500;
   list-style: none;
-  color: #D65A31;
+  color: #d65a31;
 }
-.navbarList li:hover{
+.navbarList li:hover {
   text-decoration: underline;
   cursor: pointer;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
-.Link{
+.Link {
   text-decoration: none;
 }
 
-@media only screen and (max-width:800px){
-  .homeTab{
+@media only screen and (max-width: 800px) {
+  .homeTab {
     display: none;
   }
-  .aboutTab{
+  .aboutTab {
     display: none;
   }
-  .searchBar input{
+  .searchBar input {
     padding: 0px;
     width: 100%;
     font-size: 16px;
   }
-  .logoTxt{
+  .logoTxt {
     font-size: 1.8em;
   }
-  .navbarList li{
+  .navbarList li {
     font-size: 16px;
   }
 }
-@media only screen and (max-width:500px){
-  .logoTxt{
+@media only screen and (max-width: 500px) {
+  .logoTxt {
     font-size: 1.5em;
   }
-  .searchBar input{
+  .searchBar input {
     padding: 0px;
     width: 100%;
     font-size: 14px;
   }
-  .navbarList li{
+  .navbarList li {
     font-size: 14px;
   }
 }
-@media only screen and (max-width:300px){
-  .logoTxt{
+@media only screen and (max-width: 300px) {
+  .logoTxt {
     font-size: 1em;
   }
 }
 
-
 /* SignIn SignUp */
-.signLink{
-  color: #D65A31;
+.signLink {
+  color: #d65a31;
 }
-.signLink:hover{
+.signLink:hover {
   font-weight: bold;
 }
-.signButton{
+.signButton {
   background-color: #222831;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
-.signButton:hover{
+.signButton:hover {
   font-weight: bold;
 }
 
@@ -143,6 +141,13 @@ body{
   font-size: 20px;
   font-weight: bold;
 }
- .username-txt{
-  color: #D65A31;
- }
+.username-txt {
+  color: #d65a31;
+}
+/* Class Card */
+
+.ClassMenu {
+  display: flex;
+  align-self: flex-start;
+  flex-direction: row-reverse;
+}

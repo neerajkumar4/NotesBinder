@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Explore, Home, Profile, Signin, Signup } from "./pages";
+import { Explore, Home, MyClasses, Profile, Signin, Signup } from "./pages";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Navbar,PrivateRoute } from "./components";
+import { Navbar, PrivateRoute } from "./components";
 
 const App = () => {
   return (
@@ -14,7 +14,8 @@ const App = () => {
           <Route path="/sign-in" element={<Signin />} />
           <Route path="/sign-up" element={<Signup />} />
           <Route element={<PrivateRoute />}>
-          <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="my-classes" element={<MyClasses />}/>
           </Route>
           <Route path="/explore" element={<Explore />} />
         </Routes>
